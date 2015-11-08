@@ -19,7 +19,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+   
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor =[UIColor whiteColor];
     _viewController =[[ViewController alloc]init];
@@ -28,15 +28,15 @@
     [self.window makeKeyAndVisible];
     
     //动态加载自定义的ShortcutItem
-    NSLog(@"%lu",application.shortcutItems.count);
-    if (application.shortcutItems.count == 0) {
-        
-        UIMutableApplicationShortcutItem *itemGang =[[UIMutableApplicationShortcutItem alloc]initWithType:[NSString stringWithFormat:@"%@.first",[[NSBundle mainBundle] bundleIdentifier]] localizedTitle:@"钢铁侠" localizedSubtitle:nil icon:[UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeLocation] userInfo:nil];
-        UIMutableApplicationShortcutItem *itemThor =[[UIMutableApplicationShortcutItem alloc]initWithType:[NSString stringWithFormat:@"%@.second",[[NSBundle mainBundle] bundleIdentifier]] localizedTitle:@"雷神" localizedSubtitle:nil icon:[UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeLocation] userInfo:nil];
-        UIMutableApplicationShortcutItem *itemBlack =[[UIMutableApplicationShortcutItem alloc]initWithType:[NSString stringWithFormat:@"%@.third",[[NSBundle mainBundle] bundleIdentifier]] localizedTitle:@"黑寡妇" localizedSubtitle:nil icon:[UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeLocation] userInfo:nil];
-        UIMutableApplicationShortcutItem *itemCaptain =[[UIMutableApplicationShortcutItem alloc]initWithType:[NSString stringWithFormat:@"%@.fourth",[[NSBundle mainBundle] bundleIdentifier]] localizedTitle:@"美国队长" localizedSubtitle:nil icon:[UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeLocation] userInfo:nil];
-        application.shortcutItems = @[itemGang,itemBlack,itemCaptain,itemThor];
-    }
+//    NSLog(@"%lu",application.shortcutItems.count);
+//    if (application.shortcutItems.count == 0) {
+//        
+//        UIMutableApplicationShortcutItem *itemGang =[[UIMutableApplicationShortcutItem alloc]initWithType:[NSString stringWithFormat:@"%@.first",[[NSBundle mainBundle] bundleIdentifier]] localizedTitle:@"钢铁侠" localizedSubtitle:nil icon:[UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeLocation] userInfo:nil];
+//        UIMutableApplicationShortcutItem *itemThor =[[UIMutableApplicationShortcutItem alloc]initWithType:[NSString stringWithFormat:@"%@.second",[[NSBundle mainBundle] bundleIdentifier]] localizedTitle:@"雷神" localizedSubtitle:nil icon:[UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeLocation] userInfo:nil];
+//        UIMutableApplicationShortcutItem *itemBlack =[[UIMutableApplicationShortcutItem alloc]initWithType:[NSString stringWithFormat:@"%@.third",[[NSBundle mainBundle] bundleIdentifier]] localizedTitle:@"黑寡妇" localizedSubtitle:nil icon:[UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeLocation] userInfo:nil];
+//        UIMutableApplicationShortcutItem *itemCaptain =[[UIMutableApplicationShortcutItem alloc]initWithType:[NSString stringWithFormat:@"%@.fourth",[[NSBundle mainBundle] bundleIdentifier]] localizedTitle:@"美国队长" localizedSubtitle:nil icon:[UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeLocation] userInfo:nil];
+//        application.shortcutItems = @[itemGang,itemBlack,itemCaptain,itemThor];
+//    }
     return YES;
 }
 
